@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>a promise is a good way to handle asynchromous operation in javascript.</p>
+    <p>three type to a promise</p>
+    <ul>
+        <li>pending</li>
+        <li>fulfilled</li>
+        <li>rejected</li>
+    </ul>
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            let mark = 10
+            if (mark > 20) {
+                setTimeout(() => {
+                    resolve("resolved")
+                }, 2000);
+            } else {
+                setTimeout(() => {
+                    reject("rejected")
+                }, 2000);
+            }
+        });
+        console.log(promise);
+        promise.then((data) => {
+            console.log("called inside then", data);
+        }).catch((res) => {
+            console.log(res);
+        })
+    </script>
+</body>
+
+</html>

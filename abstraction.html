@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>an abstraction is a way of hiding the implementation details and showing only the functionality to the users.</p>
+    <p>abstraction hide certails details and only show the essential features of the object.</p>
+    <p>abstraction means hiding of internal details</p>
+    <script>
+        function Employee(name, age, basesalary) {
+            this.name = name;
+            this.age = age;
+            this.basesalary = basesalary;
+
+            let monthbonus = 10000;
+
+            let calculatefinalsalary = function () {
+                let finalsalary = basesalary + monthbonus
+                console.log('Final salary:' + finalsalary);
+            }
+
+
+            this.getEmpDetails = function () {
+                console.log('Name :' + this.name);
+                console.log('age :' + this.age);
+                calculatefinalsalary();
+
+            }
+        }
+        let emp1 = new Employee('abc', 21, 25000);
+        emp1.getEmpDetails();
+    </script>
+</body>
+
+</html>
