@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>inheritance refers to passing down characteristics from a parent to a child so that a new piece of code reuse and
+        build features of exiting one.</p>
+</body>
+<script>
+     class bike
+     {
+        constructor(){
+            this.company="honda";
+        }
+     }
+     class vehicle extends bike{
+        constructor(name,price){
+            super();
+            this.name= name;
+            this.price= price;
+        }
+     }
+     let v = new vehicle("shine","10000");
+     console.log(v.company,v.name,v.price);  
+</script>
+
+</html>
