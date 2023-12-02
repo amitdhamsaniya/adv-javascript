@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>async keyword placed before a function.</p>
+    <p>"async" before a fuction means one simple thing; afunction always retuns a promise.</p>
+
+    <script>
+   
+        //     let promise = new Promise(function (resolve, reject) {
+        //         setTimeout(function () {
+        //             resolve('promise resolved')
+        //         }, 2000);
+
+        //     });
+        //     async function asyncfun() {
+        //     let result = await promise;
+        //     console.log(result);
+        //     console.log('hello..');
+        // }
+        // asyncfun()
+
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('promise resolved')
+            }, 2000);
+        })
+        async function asycnfun() {
+            let result = await promise
+            console.log(result);
+            console.log('hello..');
+            
+        }
+        asycnfun()
+    </script>
+</body>
+
+</html>
