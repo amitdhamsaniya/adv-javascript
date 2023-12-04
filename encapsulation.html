@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>encapsulation is packing of data and function into one commponent and then controlling access to that component to make a "blackbox" out of the object. </p>
+
+    <p>encapsulation is a process of wrapping the single unit its into through the CLASS class of example of encapsulation.</p>
+</body>
+<script>
+
+    class Student  
+      {  
+        constructor()  
+        {  
+           let name , marks;    
+        }  
+            getName()  
+            {  
+              return this.name;  
+            }  
+          setName(name)  
+          {  
+            this.name=name;  
+          }  
+
+          getMarks()  
+          {  
+            return this.marks;  
+          }  
+        setMarks(marks)  
+        {  
+          this.marks=marks;  
+        }  
+
+        }  
+        let stud=new Student();  
+         stud.setName("John");  
+         stud.setMarks(80);  
+        console.log(stud.getName(),stud.getMarks()); 
+</script>
+
+</html>
