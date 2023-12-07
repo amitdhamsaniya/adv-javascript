@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>polymorphism means the same function name with diffrent signatures.</p>
+</body>
+<script>
+    class firstclass{
+        add(){
+            console.log("fmethod");
+        }
+    }
+    class secondclass extends firstclass{
+        add(){
+            console.log(10+10);
+        }
+    }
+    class thirdclass extends secondclass{
+        add(){
+            console.log("lmethod");
+        }
+    }
+    let a = new firstclass();
+    let b = new secondclass();
+    let c = new thirdclass();
+    a.add();
+    b.add();
+    c.add();
+</script>
+</html>
