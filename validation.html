@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]{
+            margin: 15px 0;
+            padding: 10px 0;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" onblur="checkvalid()" name="name" id="name" placeholder="name">
+        <span id="nameerror"></span>
+        <br> 
+        <input type="text" name="username" id="username" placeholder="username">
+        <span id="useerror"></span>
+        <br>
+        <input type="text" name="password" id="password" placeholder="password">
+        <span id="passerror"></span>
+        <br>
+        <input type="text" name="name" id="email" placeholder="email">
+        <span id="emailerror"></span>   
+         
+    </form>
+    <script>
+        function checkvalid() {
+            let indata = document.getElementById("name").value
+            let userdata = document.getElementById("username").value
+            let passdata = document.getElementById("password").value
+            let emaildata = document.getElementById("email").value
+            console.log(indata);
+            if (indata == "") {
+                document.getElementById("nameerror").innerText = "this filed is req!!";
+            }else{
+                document.getElementById("nameerror").innerText = "";
+            }
+            if (userdata == "") {
+                document.getElementById("useerror").innerText = "this fild is req!!"
+            }else{
+                document.getElementById("useerror").innerText = "";
+            }
+            if (passdata == "") {
+                document.getElementById("passerror").innerText = "this fild is req!!"
+            }else{
+                document.getElementById("passerror").innerText = "";
+            }
+            if (emaildata == "") {
+                document.getElementById("emailerror").innerText = "this fild is req!!"
+            }else{
+                document.getElementById("emailerror").innerText = "";
+            }   
+        }
+    </script>
+    
+</body>
+</html>
