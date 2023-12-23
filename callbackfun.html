@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>a callback function is a function passed  in to another function as an argument.</p>
+    <script>
+     
+        function parentFunction(callbackFun) {
+            console.log("called before callback inside parent");
+            setTimeout(() => {
+                console.log("hello");
+            }, 2000);
+            console.log("called after callback inside parent")
+        }
+        function InnerFunction(data) {
+            console.log("called inside callback", data);
+
+        }
+
+        parentFunction(InnerFunction)
+    </script>
+</body>
+
+</html>
